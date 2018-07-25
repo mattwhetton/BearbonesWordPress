@@ -1,74 +1,73 @@
-# Twenty Seventeen
+# [HTML5 Blank](http://html5blank.com)
 
-[![Build Status](https://travis-ci.org/WordPress/twentyseventeen.svg?branch=master)](https://travis-ci.org/WordPress/twentyseventeen)
+Powerful shell for rapidly deploying your WordPress projects.
 
-## This Repository is No Longer Maintained
+* Project: [github.com/toddmotto/html5blank](https://github.com/toddmotto/html5blank)
+* Website: [html5blank.com](http://html5blank.com)
+* Twitter: [@html5blank](http://twitter.com/html5blank)
+* Author : [Todd Motto](http://toddmotto.com) // [@toddmotto](http://twitter.com/toddmotto)
 
-Twenty Seventeen is a theme now included in all WordPress installs. To report any issues please go here: https://core.trac.wordpress.org/newticket
+## Contributors (in order of pull request)
+[David Munn](https://github.com/Munnday), [Patrick Zeinert](https://github.com/CoeusCC), [J-Rabe](https://github.com/J-Rabe), [Steve Steiner](https://github.com/ssteinerx), [Kyle Hudson](https://github.com/diskhub), [chrisdl](https://github.com/chrisdl), [Marcel Miranda](https://github.com/reaktivo), [Fx Bénard](https://github.com/fxbenard), Ioan Virag, [Mohamed Elkebir](https://github.com/elkebirmed), [lregla](https://github.com/lregla), Carlos Pinar, [Joshua Lyman](https://github.com/jlyman), [Kevin Plattret](https://github.com/kevinplattret), [Wesllei Henrique](https://github.com/wesllei), [Stacey Cordoni](https://github.com/staceycordoni).
 
-**Contributors:** the WordPress team  
-**Requires at least:** WordPress 4.4  
-**Tested up to:** WordPress 4.7  
-**Version:** 1.0  
-**License:** GPLv2 or later  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Tags:** one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+## Getting Started with HTML5 Blank
 
-## Description
+Download the latest version from [html5blank.com](http://html5blank.com)
 
-Twenty Seventeen brings your site to life with immersive featured images and subtle animations. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+## Get involved! Make HTML5 Blank better
 
-For more information about Twenty Seventeen please go to https://codex.wordpress.org/Bearbones.
+There are a few ways to get involved, submit a Pull Request, or submit a comment on the website - [html5blank.com](http://html5blank.com)
 
-## Installation
+## Features
 
-1.  In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2.  Type in Twenty Seventeen in the search form and press the 'Enter' key on your keyboard.
-3.  Click on the 'Activate' button to use your new theme right away.
-4.  Go to https://codex.wordpress.org/Bearbones for a guide on how to customize this theme.
-5.  Navigate to Appearance > Customize in your admin panel and customize to taste.
+### HTML5
+* Basic Semantic HTML5 Markup
+* W3C Valid Code Foundations
+* Responsive Ready, ViewPort meta data
+* HTML Class support for IE7, IE8, IE9 Conditionals (HTML5 Boilerplate)
+* Clean, neatly organised code, with PHP annotations
 
-## Copyright
+### jQuery + JavaScript
+* Replaced built-in WordPress enqueue with Google CDN
+* Protocol relative jQuery if Google CDN offline (HTML5 Boilerplate)
+* Conditionizr for cross-platform/device detects and enhancements
+* Modernizr feature detection, HTML5 element support for legacy, progressive enhancement (HTML5 Boilerplate)
+* DOM Ready JavaScript file setup (scripts.js) for instant JavaScript development
+* JavaScript files enqueued using WordPress functions into wp_head
 
-Twenty Seventeen WordPress Theme, Copyright 2016 WordPress.org
-Twenty Seventeen is distributed under the terms of the GNU GPL
+### CSS3
+* HTML5 Boilerplate reset
+* Media Queries framework for instant development using @media
+* @font-face empty framework with Fonts folder setup ready for new custom fonts
+* CSS3 custom selection styles
+* Inline print styles (HTML5 Boilerplate)
+* Body element config, including Optimize Legibility for kerning and font-smoothing
+* Replaced focus styles to avoid blue blur in field elements, replaced with border
+* Stylesheet enqueued using WordPress functions into wp_head
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
+### Preloaded Functions (functions.php)
+* Enqueue Scripts functions setup
+* Enqueue Styles functions setup
+* Dynamic WordPress Menu Navigation Support, preloaded with 3 Dynamic menus
+* Cleaned up dynamic nav output (Remove outer 'div')
+* Remove all injected classes from nav items, ID's, Page ID's
+* Custom Post Type x1 preloaded for demonstration, supporting: Category, Tags, Post Thumbnails, Excerpts
+* Dynamic Sidebar with x2 Widget Areas, and sidebar.php setup
+* WordPress Thumbnail Support, no Plugin image cropping, custom Arrays and Thumbnail settings
+* Custom Excerpt callbacks, with changeable callback numbers
+* Replaced 'Read More' button for custom Excerpt callbacks
+* Demo Shortcodes included, with Nested Shortcode capability
+* Add Slug to body class (Starkers Theme credit)
+* wp_head functions stripped right down, remove excess injected junk
+* All functions annotated, categorised into sections, filters, actions, shortcodes etc.
+* Space for development, neatly organised code with Modules/External files
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-Twenty Seventeen bundles the following third-party resources:
-
-HTML5 Shiv v3.7.3, Copyright 2014 Alexander Farkas
-**Licenses**: MIT/GPL2
-Source: https://github.com/aFarkas/html5shiv
-
-jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
-**License**: MIT
-Source: https://github.com/flesler/jquery.scrollTo
-
-normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
-**License:** MIT
-Source: https://necolas.github.io/normalize.css/
-
-Font Awesome icons, Copyright Dave Gandy
-**License:** SIL Open Font License, version 1.1.
-Source: http://fontawesome.io/
-
-Bundled header image, Copyright Alvin Engler
-**License:** CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/@englr?photo=bIhpiQA009k
-
-## Changelog
-
-### 1.0
-
-- Released: December 6, 2016
-
-Initial release
+### Theme Files and Functionality
+* Built in Pagination, no plugins (strips out prev + next post and gives page numbers)
+* Optimised Google Analytics in footer (HTML5 Boilerplate)
+* Widget Area Sidebar support, functions in place to get developing
+* Custom Search Form included (searchform.php) - fully editable
+* Tags support for showing Post Tags
+* Category support for showing the Category of post
+* Author support showing the author
+* Demo Custom Page Template for expansion

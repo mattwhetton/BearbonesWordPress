@@ -1,52 +1,50 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Bearbones
- * @since 0.1.0
- * @version 0.1.0
- */
+<!doctype html>
+<html <?php language_attributes(); ?> class="no-js">
+	<head>
+		<meta charset="<?php bloginfo('charset'); ?>">
+		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link href="//www.google-analytics.com" rel="dns-prefetch">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-<?php wp_head(); ?>
-</head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
+		<?php wp_head(); ?>
+		<script>
+        // conditionizr.com
+        // configure environment tests
+        conditionizr.config({
+            assets: '<?php echo get_template_directory_uri(); ?>',
+            tests: {}
+        });
+        </script>
 
-	<header id="masthead" class="site-header" role="banner">
+	</head>
+	<body <?php body_class(); ?>>
 
-		<?php get_template_part( 'components/header/header', 'image' ); ?>
+		<!-- wrapper -->
+		<div class="wrapper">
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+			<!-- header -->
+			<header class="header clear" role="banner">
 
-	</header><!-- #masthead -->
+					<!-- logo -->
+					<div class="logo">
+						<a href="<?php echo home_url(); ?>">
+							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+						</a>
+					</div>
+					<!-- /logo -->
 
-	<?php
-	// If a regular post or page, and not the front page, show the featured image.
-	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
-		echo '<div class="single-featured-image-header">';
-		the_post_thumbnail( 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
+					<!-- nav -->
+					<nav class="nav" role="navigation">
+						<?php html5blank_nav(); ?>
+					</nav>
+					<!-- /nav -->
 
-	<div id="content" class="site-content">
+			</header>
+			<!-- /header -->

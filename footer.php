@@ -1,46 +1,30 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Bearbones
- * @since 0.1.0
- * @version 0.1.0
- */
+			<!-- footer -->
+			<footer class="footer" role="contentinfo">
 
-?>
+				<!-- copyright -->
+				<p class="copyright">
+					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
+					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
+				</p>
+				<!-- /copyright -->
 
-	</div><!-- #content -->
+			</footer>
+			<!-- /footer -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrap">
-			<?php
-			get_template_part( 'components/footer/footer', 'widgets' );
+		</div>
+		<!-- /wrapper -->
 
-			if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" role="navigation" aria-label="<?php _e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'social',
-							'menu_class'     => 'social-links-menu',
-							'depth'          => 1,
-							'link_before'    => '<span class="screen-reader-text">',
-							'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
-						) );
-					?>
-				</nav><!-- .social-navigation -->
-			<?php endif;
+		<?php wp_footer(); ?>
 
-			get_template_part( 'components/footer/site', 'info' );
-			?>
-		</div><!-- .wrap -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-<?php wp_footer(); ?>
+		<!-- analytics -->
+		<script>
+		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
+		ga('send', 'pageview');
+		</script>
 
-</body>
+	</body>
 </html>

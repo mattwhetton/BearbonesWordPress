@@ -1,34 +1,24 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package WordPress
- * @subpackage Bearbones
- * @since 0.1.0
- * @version 0.1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+	<main role="main">
+		<!-- section -->
+		<section>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+			<!-- article -->
+			<article id="post-404">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyseventeen' ); ?></h1>
-				</header><!-- .page-header -->
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyseventeen' ); ?></p>
+				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
+				<h2>
+					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
+				</h2>
 
-					<?php get_search_form(); ?>
+			</article>
+			<!-- /article -->
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+		</section>
+		<!-- /section -->
+	</main>
 
-<?php get_footer();
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>
