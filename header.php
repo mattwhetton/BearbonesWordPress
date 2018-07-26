@@ -21,7 +21,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<main>
+<div class="container full-x">
+					<div class="bb-grid lg">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bearbones' ); ?></a>
 
 	<header id="masthead" class="site-header">
@@ -42,7 +44,7 @@
 				?>
 				<p class="site-description"><?php echo $bearbones_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
+		</div>
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bearbones' ); ?></button>
@@ -52,7 +54,9 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav>
+			</header>
+			</div>
+			</div>
 
 	<div id="content" class="site-content">

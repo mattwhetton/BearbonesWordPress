@@ -1,19 +1,34 @@
-.bb-footer {
-	.social-links {
-		li {
-			padding: 0 $padding / 2;
-		}
-	}
-	.logo {
-		display: block;
-		margin: 0 auto;
-		width: 3rem;
-		height: 3rem;
-		background: url('../../images/bb-logo.svg') no-repeat;
-		background-size: 100%;
-		&:hover {
-			background: url('../../images/bb-logo-bone.svg') no-repeat;
-			background-size: 100%;
-		}
-	}
+.tmc-footer {
+  color: $white;
+  .tmc-footer-links {
+    line-height: 1.5;
+    &:not(:last-child) {
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      display: inline-flex;
+    }
+    .link-header,
+    .link-header p {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+    @extend .footer-sitemap;
+    p {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-lg;
+    }
+  }
+  .footer-sitemap {
+    margin-top: 1rem;
+    @include respond-to('lg') {
+      margin-top: 0;
+    }
+    li {
+      padding-right: $padding/2;
+      a {
+        color: $white;
+      }
+    }
+  }
 }
