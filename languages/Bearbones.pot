@@ -1,199 +1,186 @@
+# Copyright (C) 2017 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: HTML5 Blank WordPress Theme\n"
-"POT-Creation-Date: 2013-09-18 00:26+0100\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Jürgen Rabe | www.egado.de <rabe@egado.de>\n"
-"Language-Team: \n"
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2016-12-23 16:00+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: _e;__\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: ..\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator:\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: ../404.php:9
-msgid "Page not found"
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: ../404.php:11
-msgid "Return home?"
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
 msgstr ""
 
-#: ../archive.php:6
-msgid "Archives"
+#: 404.php:30
+msgid "Most Used Categories"
 msgstr ""
 
-#: ../author.php:8
-msgid "Author Archives for "
+#: 404.php:47
+#. translators: %1$s: smiley
+msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: ../author.php:14
-msgid "About "
+#: comments.php:34
+#. translators: 1: title.
+msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
-#: ../author.php:41 ../loop.php:22 ../single.php:27
-msgid "Published by"
+#: comments.php:67
+msgid "Comments are closed."
 msgstr ""
 
-#: ../author.php:42 ../loop.php:23 ../single.php:28
-msgid "Leave your thoughts"
+#: footer.php:18
+msgid "https://wordpress.org/"
 msgstr ""
 
-#: ../author.php:42 ../loop.php:23 ../single.php:28
-msgid "1 Comment"
+#: footer.php:20
+#. translators: %s: CMS name, i.e. WordPress.
+msgid "Proudly powered by %s"
 msgstr ""
 
-#: ../author.php:42 ../loop.php:23 ../single.php:28
-msgid "% Comments"
+#: footer.php:25
+#. translators: 1: Theme name, 2: Theme author.
+msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: ../author.php:61 ../loop.php:39 ../page.php:31 ../single.php:53
-#: ../template-demo.php:31
-msgid "Sorry, nothing to display."
+#: functions.php:47
+msgid "Primary"
 msgstr ""
 
-#: ../category.php:6
-msgid "Categories for"
+#: functions.php:105
+msgid "Sidebar"
 msgstr ""
 
-#: ../comments.php:3
-msgid "Post is password protected. Enter the password to view any comments."
+#: functions.php:107
+msgid "Add widgets here."
 msgstr ""
 
-#: ../comments.php:18
-msgid "Comments are closed here."
+#: header.php:24
+msgid "Skip to content"
 msgstr ""
 
-#: ../footer.php:6
-msgid "Powered by"
+#: header.php:45
+msgid "Primary Menu"
 msgstr ""
 
-#: ../functions.php:133
-msgid "Header Menu"
+#: inc/template-tags.php:52
+#. translators: used between list items, there is a space after the comma
+msgid ", "
 msgstr ""
 
-#: ../functions.php:134
-msgid "Sidebar Menu"
+#: inc/template-tags.php:55
+#. translators: 1: list of categories.
+msgid "Posted in %1$s"
 msgstr ""
 
-#: ../functions.php:135
-msgid "Extra Menu"
+#: inc/template-tags.php:62
+#. translators: 1: list of tags.
+msgid "Tagged %1$s"
 msgstr ""
 
-#: ../functions.php:181
-msgid "Widget Area 1"
+#: inc/template-tags.php:72
+#. translators: %s: post title
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: ../functions.php:182 ../functions.php:193
-msgid "Description for this widget-area..."
+#: inc/template-tags.php:89 template-parts/content-page.php:35
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: ../functions.php:192
-msgid "Widget Area 2"
+#: search.php:21
+#. translators: %s: search query.
+msgid "Search Results for: %s"
 msgstr ""
 
-#: ../functions.php:258
-msgid "View Article"
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
 msgstr ""
 
-#: ../functions.php:319
-#, php-format
-msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+#: template-parts/content-none.php:25
+#. translators: 1: link to WP admin new post page.
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: ../functions.php:322
-msgid "Your comment is awaiting moderation."
+#: template-parts/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
-#: ../functions.php:328
-#, php-format
-msgid "%1$s at %2$s"
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
-#: ../functions.php:328
-msgid "(Edit)"
+#: template-parts/content-page.php:22 template-parts/content.php:45
+msgid "Pages:"
 msgstr ""
 
-#: ../functions.php:411 ../functions.php:412
-msgid "HTML5 Blank Custom Post"
+#: template-parts/content.php:34
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: ../functions.php:413
-msgid "Add New"
+#. Theme Name of the plugin/theme
+msgid "_s"
 msgstr ""
 
-#: ../functions.php:414
-msgid "Add New HTML5 Blank Custom Post"
+#. Theme URI of the plugin/theme
+msgid "https://underscores.me/"
 msgstr ""
 
-#: ../functions.php:415
-msgid "Edit"
+#. Description of the plugin/theme
+msgid ""
+"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
+"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
+"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
+"theme out there. That's what I'm here for."
 msgstr ""
 
-#: ../functions.php:416
-msgid "Edit HTML5 Blank Custom Post"
+#. Author of the plugin/theme
+msgid "Automattic"
 msgstr ""
 
-#: ../functions.php:417
-msgid "New HTML5 Blank Custom Post"
+#. Author URI of the plugin/theme
+msgid "https://automattic.com/"
 msgstr ""
 
-#: ../functions.php:418 ../functions.php:419
-msgid "View HTML5 Blank Custom Post"
+#: comments.php:40
+#. translators: 1: comment count number, 2: title.
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:29
+#. translators: %s: post date.
+msgctxt "post date"
+msgid "Posted on %s"
 msgstr ""
 
-#: ../functions.php:420
-msgid "Search HTML5 Blank Custom Post"
+#: inc/template-tags.php:35
+#. translators: %s: post author.
+msgctxt "post author"
+msgid "by %s"
 msgstr ""
 
-#: ../functions.php:421
-msgid "No HTML5 Blank Custom Posts found"
+#: inc/template-tags.php:59
+#. translators: used between list items, there is a space after the comma
+msgctxt "list item separator"
+msgid ", "
 msgstr ""
-
-#: ../functions.php:422
-msgid "No HTML5 Blank Custom Posts found in Trash"
-msgstr ""
-
-#: ../index.php:6
-msgid "Latest Posts"
-msgstr ""
-
-#: ../search.php:6
-#, php-format
-msgid "%s Search Results for "
-msgstr ""
-
-#: ../searchform.php:3
-msgid "To search, type and hit enter."
-msgstr ""
-
-#: ../searchform.php:4
-msgid "Search"
-msgstr ""
-
-#: ../single.php:33
-msgid "Tags: "
-msgstr ""
-
-#: ../single.php:35
-msgid "Categorised in: "
-msgstr ""
-
-#: ../single.php:37
-msgid "This post was written by "
-msgstr ""
-
-#: ../tag.php:6
-msgid "Tag Archive: "
-msgstr ""
-
-#: ../searchform.php:3
-msgid "To search, type and hit enter."
-msgstr ""
-
-#~ msgid "%s results for "
-#~ msgstr "%s Ergebnisse für "

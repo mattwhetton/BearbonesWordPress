@@ -1,0 +1,19 @@
+.bb-footer {
+	.social-links {
+		li {
+			padding: 0 $padding / 2;
+		}
+	}
+	.logo {
+		display: block;
+		margin: 0 auto;
+		width: 3rem;
+		height: 3rem;
+		background: url('../../images/bb-logo.svg') no-repeat;
+		background-size: 100%;
+		&:hover {
+			background: url('../../images/bb-logo-bone.svg') no-repeat;
+			background-size: 100%;
+		}
+	}
+}

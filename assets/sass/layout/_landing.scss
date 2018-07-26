@@ -1,0 +1,182 @@
+.section {
+	@include respond-to('lg') {
+		padding-top: $layout-spacing-lg;
+		padding-bottom: $layout-spacing-lg;
+	}
+}
+
+.bb-body-parts {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	.body-part {
+		overflow-x: hidden;
+		padding: 0;
+		width: 50%;
+
+		@include respond-to('lg') {
+			width: 75%;
+		}
+	}
+	.head {
+		z-index: 10;
+		opacity: 0;
+		transform: translateY(calc(-4rem + 20%));
+		animation: head-animation 2s forwards;
+		animation-timing-function: $transition-effect;
+		animation-delay: 1s;
+
+		will-change: head-animation;
+	}
+	.torso {
+		z-index: 9;
+		opacity: 0;
+		transform: translateX(-4rem);
+		animation: torso-animation 2s forwards;
+		animation-timing-function: $transition-effect;
+		animation-delay: 1s;
+
+		will-change: torso-animation;
+	}
+	.legs {
+		z-index: 8;
+		opacity: 0;
+		transform: translateY(calc(4rem - 70%));
+		animation: legs-animation 2s forwards;
+		animation-timing-function: $transition-effect;
+		animation-delay: 1s;
+
+		will-change: legs-animation;
+	}
+}
+
+.intro {
+	opacity: 0;
+	transform: translateY(calc(-2rem + 10%));
+	animation: intro-animation 1s forwards;
+	animation-timing-function: $transition-effect;
+
+	will-change: intro-animation;
+}
+
+@keyframes head-animation {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(20%);
+	}
+}
+
+@keyframes torso-animation {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes legs-animation {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-70%);
+	}
+}
+
+@keyframes intro-animation {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-10%);
+	}
+}
+
+.doc-svg {
+	.head,
+	.bones {
+		transform: rotate(0);
+		transform-origin: center;
+	}
+	.head {
+		animation: head-rotate-movement 4s infinite;
+	}
+	.bones {
+		animation: bones-rotate-movement 4s infinite;
+	}
+	.eyes {
+		animation: eye-flicker 4s infinite;
+
+		fill: #181818;
+	}
+	.arm {
+		transform: translateY(0);
+		animation: arm-movement 6s infinite;
+	}
+}
+
+@keyframes head-rotate-movement {
+	0%,
+	12% {
+		transform: rotate(0);
+	}
+	4% {
+		transform: rotate(2deg);
+	}
+	8% {
+		transform: rotate(-2deg);
+	}
+}
+
+@keyframes bones-rotate-movement {
+	0%,
+	12% {
+		transform: rotate(0);
+	}
+	4% {
+		transform: rotate(-3deg);
+	}
+	8% {
+		transform: rotate(3deg);
+	}
+}
+
+@keyframes eye-flicker {
+	0%,
+	90% {
+		fill: #181818;
+	}
+	10% {
+		fill: $white;
+	}
+}
+
+@keyframes arm-movement {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-1rem);
+	}
+}

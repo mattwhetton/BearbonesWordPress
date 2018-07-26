@@ -1,0 +1,39 @@
+.hljs {
+	display: block;
+	overflow-x: auto;
+	background: transparent;
+	color: $base-color;
+	&.html {
+		.hljs-name,
+		.hljs-strong {
+			font-weight: bold;
+		}
+		.hljs-tag {
+			color: $primary-color;
+		}
+		.hljs-attr {
+			color: $negative-color;
+		}
+		.hljs-string {
+			color: $positive-color;
+		}
+	}
+	&.javascript {
+		display: inline-block;
+		padding: $padding / 2 $padding;
+		border-radius: $border-radius;
+		background: $primary-color;
+		color: $primary-pair;
+	}
+}
+
+code {
+	padding: $padding / 2;
+	border-radius: $border-radius;
+	background: $primary-color;
+	color: $primary-pair;
+}
+
+.bb-table code {
+	white-space: nowrap;
+}
