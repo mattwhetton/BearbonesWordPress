@@ -1,79 +1,69 @@
 @font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: 'Inter-UI';
-	src: url('../../fonts/Inter-UI/Inter-UI-Regular.woff2') format('woff2'),
-	url('../../fonts/Inter-UI/Inter-UI-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Bariol';
+  src: url('../../fonts/Bariol/Bariol-Light.woff2') format('woff2'),
+    url('../../fonts/Bariol/Bariol-Light.woff') format('woff');
 
-	font-display: swap;
+  font-display: swap;
 }
 
 @font-face {
-	font-weight: normal;
-	font-style: italic;
-	font-family: 'Inter-UI';
-	src: url('../../fonts/Inter-UI/Inter-UI-Italic.woff2') format('woff2'),
-	url('../../fonts/Inter-UI/Inter-UI-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Bariol';
+  src: url('../../fonts/Bariol/Bariol-LightItalic.woff2') format('woff2'),
+    url('../../fonts/Bariol/Bariol-LightItalic.woff') format('woff');
 
-	font-display: swap;
+  font-display: swap;
 }
 
 @font-face {
-	font-weight: 500;
-	font-style: normal;
-	font-family: 'Inter-UI';
-	src: url('../../fonts/Inter-UI/Inter-UI-Medium.woff2') format('woff2'),
-	url('../../fonts/Inter-UI/Inter-UI-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-family: 'Bariol';
+  src: url('../../fonts/Bariol/Bariol-Regular.woff2') format('woff2'),
+    url('../../fonts/Bariol/Bariol-Regular.woff') format('woff');
 
-	font-display: swap;
+  font-display: swap;
 }
 
 @font-face {
-	font-weight: 500;
-	font-style: italic;
-	font-family: 'Inter-UI';
-	src: url('../../fonts/Inter-UI/Inter-UI-MediumItalic.woff2') format('woff2'),
-	url('../../fonts/Inter-UI/Inter-UI-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-family: 'Bariol';
+  src: url('../../fonts/Bariol/Bariol-RegularItalic.woff2') format('woff2'),
+    url('../../fonts/Bariol/Bariol-RegularItalic.woff') format('woff');
 
-	font-display: swap;
+  font-display: swap;
 }
 
 @font-face {
-	font-weight: 600;
-	font-style: normal;
-	font-family: 'Inter-UI';
-	src: url('../../fonts/Inter-UI/Inter-UI-Bold.woff2') format('woff2'),
-	url('../../fonts/Inter-UI/Inter-UI-Bold.woff') format('woff');
+  font-weight: 600, 700;
+  font-style: normal;
+  font-family: 'Bariol';
+  src: url('../../fonts/Bariol/Bariol-Bold.woff2') format('woff2'),
+    url('../../fonts/Bariol/Bariol-Bold.woff') format('woff');
 
-	font-display: swap;
+  font-display: swap;
 }
 
 @font-face {
-	font-weight: 600;
-	font-style: italic;
-	font-family: 'Inter-UI';
-	src: url('../../fonts/Inter-UI/Inter-UI-BoldItalic.woff2') format('woff2'),
-	url('../../fonts/Inter-UI/Inter-UI-BoldItalic.woff') format('woff');
+  font-weight: 600, 700;
+  font-style: italic;
+  font-family: 'Bariol';
+  src: url('../../fonts/Bariol/Bariol-BoldItalic.woff2') format('woff2'),
+    url('../../fonts/Bariol/Bariol-BoldItalic.woff') format('woff');
 
-	font-display: swap;
+  font-display: swap;
 }
 
 @font-face {
-	font-weight: 700;
-	font-style: normal;
-	font-family: 'Inter-UI';
-	src: url('../../fonts/Inter-UI/Inter-UI-Black.woff2') format('woff2'),
-	url('../../fonts/Inter-UI/Inter-UI-Black.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-family: 'Olivier';
+  src: url('../../fonts/Olivier/Olivier-Regular.woff2') format('woff2'),
+    url('../../fonts/Olivier/Olivier-Regular.woff') format('woff');
 
-	font-display: swap;
-}
-
-@font-face {
-	font-weight: 700;
-	font-style: italic;
-	font-family: 'Inter-UI';
-	src: url('../../fonts/Inter-UI/Inter-UI-BlackItalic.woff2') format('woff2'),
-	url('../../fonts/Inter-UI/Inter-UI-BlackItalic.woff') format('woff');
-
-	font-display: swap;
+  font-display: swap;
 }
