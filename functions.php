@@ -7,6 +7,11 @@
  * @package Bearbones
  */
 
+// function remove_admin_login_header() {
+//     remove_action('wp_head', '_admin_bar_bump_cb');
+// }
+// add_action('get_header', 'remove_admin_login_header');
+
 if ( ! function_exists( 'bearbones_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -74,8 +79,6 @@ if ( ! function_exists( 'bearbones_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );

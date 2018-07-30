@@ -14,19 +14,21 @@
 
 get_header();
 ?>
-		<main>
-			<section>
-				<div class="container full-x">
-					<div class="bb-grid lg">
-						<?php
+<main>
+	<section class="section lg">
+		<div class="container">
+			<div class="bb-grid lg">
+				<?php
 						if ( have_posts() ) :
 
 							if ( is_home() && ! is_front_page() ) :
 								?>
-								<header>
-									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-								</header>
-								<?php
+				<header>
+					<h1 class="page-title screen-reader-text">
+						<?php single_post_title(); ?>
+					</h1>
+				</header>
+				<?php
 							endif;
 
 							/* Start the Loop */
@@ -50,11 +52,11 @@ get_header();
 
 						endif;
 						?>
-					</div>
-				</div>
-			</section>
-		</main>
+			</div>
+		</div>
+	</section>
+</main>
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

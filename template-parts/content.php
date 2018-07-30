@@ -9,30 +9,18 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
+<div class="column one-third">
+	<article class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "
+	 "; } ?> bb-box" id="post-<?php the_ID(); ?>">
+		<?php bearbones_post_thumbnail(); ?>
+		<div class="header">
+			<div class="title">
 				<?php
-				bearbones_posted_on();
-				bearbones_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php bearbones_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
+			the_title( '<h1><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+		?>
+			</div>
+			<div class="subtitle">
+				<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
@@ -51,9 +39,23 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+			</div>
+		</div>
+		<!-- .content -->
 
-	<footer class="entry-footer">
-		<?php bearbones_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+		<footer class="footer d-flex align-self-end font-weight-bold">
+			<?php 
+				if ( 'post' === get_post_type() ) :
+					?>
+			<small>
+				<?php
+							bearbones_posted_on();
+							bearbones_posted_by();
+							?>
+			</small>
+			<?php endif; ?>
+		</footer>
+		<!-- .footer -->
+	</article>
+	<!-- #post-<?php the_ID(); ?>-->
+</div>

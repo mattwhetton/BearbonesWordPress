@@ -10,21 +10,21 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section id="primary" class="content-area">
 
-		<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
+	<header class="page-header">
+		<h1 class="page-title">
+			<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'bearbones' ), '<span>' . get_search_query() . '</span>' );
 					?>
-				</h1>
-			</header><!-- .page-header -->
+		</h1>
+	</header>
+	<!-- .page-header -->
 
-			<?php
+	<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -47,8 +47,8 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+</section>
+<!-- #primary -->
 
 <?php
 get_sidebar();

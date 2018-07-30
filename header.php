@@ -12,6 +12,7 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,42 +22,55 @@
 </head>
 
 <body <?php body_class(); ?>>
-<main>
-<div class="container full-x">
-					<div class="bb-grid lg">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bearbones' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$bearbones_description = get_bloginfo( 'description', 'display' );
-			if ( $bearbones_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $bearbones_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+	<section id="navbar">
+		<div class="container full-x">
+			<!-- <a class="skip-link screen-reader-text" href="#content">
+					<?php esc_html_e( 'Skip to content', 'bearbones' ); ?>
+			</a> -->
+			<header class="bb-navbar">
+				<div class="brand">
+					<div class="item">
+						<a href="/" class="logo"></a>
+						<?php
+							// $custom_logo_id = get_theme_mod( 'custom_logo' );
+							// $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+							// if ( has_custom_logo() ) {
+							// 		echo '<img src="'. esc_url( $logo[0] ) .'">';
+							// } else {
+							// 		echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
+							// }
+							if ( is_front_page() && is_home() ) :
+						?>
+					</div>
+					<!-- <button class="toggle" aria-controls="primary-menu" aria-expanded="false">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button> -->
+				</div>
+				<!-- <div id="navbar-menu" class="items">
+					<div class="right">
+						<div class="item bb-dropdown hover">
+							<a class="link dropdown-toggle">
+								Pages
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="/500-pound-loans">£500 loans</a>
+								<a class="dropdown-item" href="/1000-pound-loans">£1000 loans</a>
+								<?php
+									wp_nav_menu( array(
+										'theme_location' => 'menu-1',
+										'menu_id'        => 'primary-menu',
+									) );
+								?>
 		</div>
+		</div>
+		</div>
+		</div> -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bearbones' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav>
-			</header>
-			</div>
-			</div>
+		<?php endif; ?>
+		</header>
+		</div>
+	</section>
 
 	<div id="content" class="site-content">

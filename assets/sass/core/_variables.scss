@@ -74,7 +74,7 @@ $body-spacing-y: 0.5rem !default;
 $layout-variant-background: $lighter-grey !default;
 $layout-variant-color: $base-color !default;
 //
-$container-max-width: 75rem !default;
+$container-max-width: 100rem !default;
 $layout-spacing-x: 1.5rem !default;
 $layout-spacing-y: 2rem !default;
 $layout-spacing-lg: $layout-spacing-y * 4 !default;
@@ -141,7 +141,7 @@ $heading-min-modifier: 1.2 !default;
 $heading-max-modifier: 1.5 !default;
 
 //******************Title
-$subtitle-font-size: $font-size-lg !default;
+$subtitle-font-size: 2rem !default;
 $title-line-height: $heading-line-height !default;
 $title-spacing-y: 1.5rem !default;
 
@@ -210,16 +210,16 @@ $loader-spinner-transition-duration: 1s !default;
 
 // Box //
 
-$box-variant-background: $base-variant-background !default;
+$box-variant-background: $white !default;
 $box-variant-color: $base-variant-color !default;
-$box-variant-border: $base-variant-border !default;
+$box-variant-border: transparent !default;
 //
 $box-border-radius: $border-radius !default;
 $box-border-style: $border-style !default;
 $box-border-width: $border-width !default;
 //
 $box-spacing-x: 1rem !default;
-$box-spacing-y: 1.5rem !default;
+$box-spacing-y: 1rem !default;
 
 // Breadcrumb //
 
@@ -396,7 +396,7 @@ $navbar-item-spacing-x: 0.5rem !default;
 $navbar-item-spacing-y: 0.75rem !default;
 $navbar-font-weight: 600 !default;
 $navbar-container-spacing: 0 1rem !default;
-$navbar-height: 4rem !default;
+$navbar-height: 3rem !default;
 $navbar-image-max-height: $navbar-height/1.5 !default;
 $navbar-item-color: $secondary-color !default;
 $navbar-item-hover-color: $base-color !default;
