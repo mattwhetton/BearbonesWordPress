@@ -9,27 +9,35 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<div class="column one-third">
+	<article class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "
+	 "; } ?> bb-box" id="post-<?php the_ID(); ?>">
+		<?php
+			the_title( '<a class="href" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' );
+		?>
+		<?php bearbones_post_thumbnail(); ?>
+		<div class="header align-self-start">
+			<div class="title">
+				<?php
+			the_title( '<h1><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+		?>
+			</div>
+		</div>
+		<!-- .content -->
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			bearbones_posted_on();
-			bearbones_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php bearbones_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php bearbones_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+		<footer class="footer d-flex align-self-end font-weight-bold">
+			<?php 
+				if ( 'post' === get_post_type() ) :
+					?>
+			<small>
+				<?php
+							bearbones_posted_on();
+							bearbones_posted_by();
+							?>
+			</small>
+			<?php endif; ?>
+		</footer>
+		<!-- .footer -->
+	</article>
+	<!-- #post-<?php the_ID(); ?>-->
+</div>

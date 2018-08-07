@@ -15,12 +15,63 @@ Tags:
 @import 'core/all';
 @import 'components/footer/all';
 
+@include respond-to-down('md') {
+  .home,
+  .author,
+  .search {
+    .section.lg {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
+.single {
+  @include respond-to('md') {
+    .container {
+      max-width: 65rem;
+    }
+  }
+  .href,
+  .href + img {
+    display: none;
+  }
+  .bb-box {
+    padding: 0;
+    h2 {
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    h1 a:hover {
+      text-decoration: none;
+    }
+    h2,
+    p,
+    a,
+    figcaption {
+      color: $base-color !important;
+    }
+    p a {
+      text-decoration: underline;
+    }
+    .subtitle {
+      font-size: 1.5rem;
+    }
+    figcaption {
+      text-align: right;
+      font-size: $font-size-md;
+      margin: 0.5rem 0;
+    }
+    img {
+      margin: 1rem 0 0 0;
+      @include respond-to-down('md') {
+        width: 100%;
+      }
+    }
+  }
+}
 .home .bb-navbar {
-  height: 10rem;
+  height: 6rem;
   align-items: baseline;
-  background: #e5da00
-    url(https://images.unsplash.com/photo-1516824711718-9c1e683412ac?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=03b020f356aab75317010dd147e96186&auto=format&fit=crop&w=2851&q=80)
-    no-repeat;
+  background: $primary-color;
   background-size: 120%;
   background-position: center 2.5rem;
   @include respond-to('md') {
@@ -42,55 +93,96 @@ Tags:
     height: 60px;
   }
 }
-
-.post.bb-box {
-  h1,
-  h2 {
-    font-family: Olivier, Arial, Helvetica, sans-serif;
-  }
-  min-height: 25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-
-  cursor: pointer;
-  .header,
-  .footer {
-    z-index: 2;
-  }
-  .header {
-    margin-top: 1rem;
-    font-weight: 700;
-  }
-  img {
-    border-radius: $box-border-radius;
-    position: absolute;
-    margin-top: -10%;
-    width: 120%;
-    height: 120%;
-    z-index: 1;
-    top: 0;
-    object-fit: cover;
-    opacity: 0.2;
-    transition: width 2s ease-out, height 2s ease-out, margin-top 2s ease-out,
-      opacity 0.5s ease-out;
-  }
-  &:not(:hover) {
-    * {
-      opacity: 0;
-      margin-top: 1rem;
+.home,
+.author,
+.search {
+  .post.bb-box {
+    h1,
+    h2 {
+      font-family: Bariol, Arial, Helvetica, sans-serif;
     }
-    img {
-      opacity: 1;
-      margin: 0;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    will-change: contents;
+
+    cursor: pointer;
+    .header,
+    .footer {
+      z-index: 3;
+    }
+    .header {
+      margin-top: 1rem;
+      font-weight: 700;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .href {
+      position: absolute;
       width: 100%;
       height: 100%;
+      z-index: 2;
+      top: 0;
+      color: transparent !important;
+    }
+    img {
+      border-radius: $box-border-radius;
+      position: absolute;
+      margin-top: -10%;
+      width: 120%;
+      height: 120%;
+      z-index: 1;
+      top: 0;
+      object-fit: cover;
+      opacity: 0.9;
+      transition: width 2s ease-out, height 2s ease-out, margin-top 2s ease-out,
+        opacity 0.5s ease-out;
+      will-change: contents;
+    }
+    @include respond-to('md') {
+      height: 30rem;
+      img {
+        opacity: 0.2;
+      }
+      &:not(:hover) {
+        * {
+          opacity: 0;
+          margin-top: 1rem;
+        }
+        img {
+          opacity: 1;
+          margin: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      * {
+        transition: all $transition-duration $transition-effect;
+        color: $base-color !important;
+        text-decoration: none;
+      }
     }
   }
-  * {
-    transition: all $transition-duration $transition-effect;
-    color: $base-color !important;
+}
+
+.home .subtitle {
+  display: none;
+}
+
+.widget ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 0 1rem 0;
+  display: inline-block;
+
+  & li {
+    padding: 1rem 0;
+    &:not(:last-child) {
+      border-bottom: 0.125rem solid $lighter-grey;
+    }
   }
 }

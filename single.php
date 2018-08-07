@@ -10,15 +10,29 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area">
+<section class="section">
+	<div class="container">
+		<div class="bb-grid">
 
-	<?php
+			<?php
 		while ( have_posts() ) :
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation();
+
+		endwhile; // End of the loop.
+		?>
+
+		</div>
+	</div>
+</section>
+<section class="section">
+	<div class="container">
+		<div class="bb-grid">
+			<?php
+		while ( have_posts() ) :
+			the_post();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -27,10 +41,10 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
-</div>
-<!-- #primary -->
-
+			<!-- #primary -->
+		</div>
+	</div>
+</section>
 <?php
 get_sidebar();
 get_footer();

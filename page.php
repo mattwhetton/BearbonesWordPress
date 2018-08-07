@@ -15,9 +15,10 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area">
-
-	<?php
+<section class="section lg">
+	<div class="container">
+		<div class="bb-grid">
+			<?php
 		while ( have_posts() ) :
 			the_post();
 
@@ -30,9 +31,10 @@ get_header();
 
 		endwhile;
 		?>
+		</div>
+	</div>
+	</div>
 
-</div>
-
-<?php
+	<?php
 get_sidebar();
 get_footer();

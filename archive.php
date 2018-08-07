@@ -9,20 +9,21 @@
 
 get_header();
 ?>
-
-		<section>
-				<div class="container">
-					<div class="bb-grid lg">
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
+<main>
+	<section class="section">
+		<div class="container">
 			<?php
+	the_archive_title( '<h1 class="page-title">', '</h1>' );
+	the_archive_description( '<div class="archive-description">', '</div>' );
+	?>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="bb-grid lg">
+				<?php if ( have_posts() ) : ?>
+
+				<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -44,10 +45,9 @@ get_header();
 
 		endif;
 		?>
-</div>
-	</div>
-	</section>
-
+			</div>
+		</div>
+</main>
 <?php
 get_sidebar();
 get_footer();

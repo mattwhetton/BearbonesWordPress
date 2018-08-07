@@ -12,8 +12,11 @@
 <div class="column one-third">
 	<article class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "
 	 "; } ?> bb-box" id="post-<?php the_ID(); ?>">
+		<?php
+			the_title( '<a class="href" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' );
+		?>
 		<?php bearbones_post_thumbnail(); ?>
-		<div class="header">
+		<div class="header align-self-start">
 			<div class="title">
 				<?php
 			the_title( '<h1><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
