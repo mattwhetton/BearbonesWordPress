@@ -82,6 +82,12 @@ if ( ! function_exists( 'bearbones_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); 
+		add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+		function remove_thumbnail_dimensions( $html ) { 
+		$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html ); return $html;
+}
 	}
 endif;
 add_action( 'after_setup_theme', 'bearbones_setup' );
@@ -161,4 +167,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

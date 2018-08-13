@@ -27,8 +27,8 @@ Tags:
 }
 .single {
   @include respond-to('md') {
-    .container {
-      max-width: 65rem;
+    .site-content .container {
+      max-width: 50rem;
     }
   }
   .href,
@@ -37,23 +37,44 @@ Tags:
   }
   .bb-box {
     padding: 0;
-    h2 {
-      margin: 1.5rem 0 0.5rem 0;
+    h2,
+    h3 {
+      margin: 1.5rem 0 0 0;
     }
     h1 a:hover {
       text-decoration: none;
     }
-    h2,
-    p,
-    a,
-    figcaption {
+    * {
       color: $base-color !important;
     }
     p a {
       text-decoration: underline;
     }
-    .subtitle {
-      font-size: 1.5rem;
+    .title {
+      margin-bottom: 3rem;
+    }
+    .subtitle,
+    p,
+    li,
+    .wp-caption {
+      font-size: 1rem;
+      line-height: 1.6;
+      @include respond-to('md') {
+        font-size: 1.75rem;
+      }
+    }
+    ul {
+      margin-top: 1rem;
+    }
+    p:not(:first-child) {
+      padding-top: 1.5rem;
+    }
+    blockquote {
+      margin: 1rem 0 0 0;
+      p {
+        padding: 0 0 0 2rem;
+        border-left: 0.25rem solid #4a4a4a;
+      }
     }
     figcaption {
       text-align: right;
@@ -64,6 +85,7 @@ Tags:
       margin: 1rem 0 0 0;
       @include respond-to-down('md') {
         width: 100%;
+        height: 100%;
       }
     }
   }
