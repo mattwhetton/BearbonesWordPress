@@ -12,6 +12,8 @@ Tags:
 
 */
 
+@import 'fonts/all';
+@import '_wordpress-hacks';
 @import 'core/all';
 @import 'components/footer/all';
 
@@ -60,7 +62,7 @@ Tags:
       font-size: 1rem;
       line-height: 1.6;
       @include respond-to('md') {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
       }
     }
     ul {
