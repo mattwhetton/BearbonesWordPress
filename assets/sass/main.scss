@@ -16,6 +16,7 @@ Tags:
 @import '_wordpress-hacks';
 @import 'core/all';
 @import 'components/footer/all';
+@import '_bearbones-hacks';
 
 @include respond-to-down('md') {
   .home,
@@ -38,6 +39,7 @@ Tags:
     display: none;
   }
   .bb-box {
+    color:$base-color;
     padding: 0;
     h2,
     h3 {
@@ -46,9 +48,10 @@ Tags:
     h1 a:hover {
       text-decoration: none;
     }
-    * {
-      color: $base-color !important;
-    }
+    // this is causing issues
+    // * {
+    //   color: $base-color !important;
+    // }
     p a {
       text-decoration: underline;
     }

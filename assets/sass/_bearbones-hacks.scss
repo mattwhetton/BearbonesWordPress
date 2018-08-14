@@ -1,0 +1,15 @@
+
+/* Bearbones hacks */
+.bb-box h1:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative), .bb-box h2:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative), .bb-box h3:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative), .bb-box h4:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative), .bb-box h5:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative), .bb-box p:not(.text-primary):not(.text-secondary):not(.text-positive):not(.text-negative) {
+    color: #4A4A4A;
+}
+
+.bb-box a:not(.bb-btn):not(.link):not(.item) {
+    color: #4A4A4A;
+}
+
+@media (min-width: 57.5rem){
+    .bb-grid .column-14 {
+        flex: none !important;
+    }
+}

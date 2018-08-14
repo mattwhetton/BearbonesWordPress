@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="column one-third">
+
 	<article class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "
 	 "; } ?> bb-box" id="post-<?php the_ID(); ?>">
 		<?php
@@ -61,4 +61,3 @@
 		<!-- .footer -->
 	</article>
 	<!-- #post-<?php the_ID(); ?>-->
-</div>
