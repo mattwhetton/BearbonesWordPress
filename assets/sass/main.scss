@@ -127,6 +127,7 @@ Tags:
     h1,
     h2 {
       font-family: Bariol, Arial, Helvetica, sans-serif;
+      text-shadow:1px 1px #333;
     }
     height: 20rem;
     display: flex;
@@ -191,6 +192,7 @@ Tags:
         transition: all $transition-duration $transition-effect;
         color: $base-color !important;
         text-decoration: none;
+        text-shadow:1px 1px #FFF;
       }
     }
   }

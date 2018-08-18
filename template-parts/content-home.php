@@ -11,7 +11,7 @@
 
 
 	<article class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "
-	 "; } ?>" id="post-<?php the_ID(); ?>">
+	 "; } ?> bb-box" id="post-<?php the_ID(); ?>">
 		<?php
 			the_title( '<a class="href" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' );
 		?>
