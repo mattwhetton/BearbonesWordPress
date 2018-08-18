@@ -22,7 +22,7 @@
 			the_title( '<h1><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 		?>
 			</div>
-			<div class="subtitle">
+			<div>
 				<?php
 		the_content( sprintf(
 			wp_kses(
